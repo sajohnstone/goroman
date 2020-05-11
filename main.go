@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
-	"./roman_numerals"
+	"./romannumerals"
 )
 
 var appName = "The Romain Numerals Converter"
