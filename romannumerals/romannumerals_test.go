@@ -1,6 +1,9 @@
 package romannumerals
 
-import "testing"
+import (
+	"strconv"
+	"testing"
+)
 
 func TestToRoman(t *testing.T){
 	var testCases = map[string]int{
@@ -9,12 +12,15 @@ func TestToRoman(t *testing.T){
 		"III": 3,
 		"IV": 4,
 		"V": 5,
+		"VI": 6,
+		"IX": 9,
+		"X": 10,
 	}
 
 	for expected, input := range testCases {
 		actual := ToRoman(input)
 		if actual != expected {
-			t.Errorf("Test failed, expected: '%s', got:  '%s'", expected, actual)
+			t.Errorf("Test failed, expected: '%s', got:  '%s' input: '%s'", expected, actual, strconv.Itoa(input))
 		}
 	}
 }
